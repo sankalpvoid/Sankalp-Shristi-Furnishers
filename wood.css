@@ -1,0 +1,162 @@
+/* Tactile wood-first visual layer. Intentionally subtle: premium material cues, not a rustic theme. */
+:root{
+  --teak-deep:#4b2f20;
+  --teak:#8a5a37;
+  --teak-warm:#b47a4d;
+  --teak-light:#d2a16f;
+  --walnut:#2d211b;
+  --cream:#f3eee5;
+  --inlay:rgba(113,73,45,.34);
+  --grain-light:rgba(255,240,217,.09);
+  --grain-dark:rgba(42,22,12,.14);
+}
+
+/* Fine inlay line that quietly repeats through the page. */
+.hero,.collection,.story,.visit,.reviews{position:relative}
+.hero::after,.collection::before,.story::before,.visit::before,.reviews::before{
+  content:"";
+  position:absolute;
+  left:4.2%;right:4.2%;height:1px;
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent,var(--inlay) 12%,rgba(164,112,72,.48) 50%,var(--inlay) 88%,transparent);
+}
+.hero::after{bottom:0}
+.collection::before,.story::before,.visit::before,.reviews::before{top:0;left:7.5%;right:7.5%}
+
+/* Make the hero's teak sample read like polished timber rather than a brown card. */
+.timber{
+  background:
+    radial-gradient(120% 90% at 18% 8%,rgba(255,225,184,.22),transparent 45%),
+    linear-gradient(100deg,#3d271c 0%,#75482d 20%,#a66d43 47%,#c58a58 67%,#70442e 82%,#3e281d 100%);
+  isolation:isolate;
+}
+.timber::before{
+  opacity:.72;
+  background:
+    repeating-radial-gradient(ellipse at 15% 48%,transparent 0 10px,rgba(42,20,10,.13) 11px 12px,transparent 13px 25px),
+    repeating-linear-gradient(96deg,transparent 0 7px,rgba(49,24,13,.19) 8px 9px,transparent 10px 29px),
+    linear-gradient(90deg,rgba(255,255,255,.03),rgba(0,0,0,.11));
+  mix-blend-mode:multiply;
+}
+.timber::after{
+  content:"";
+  position:absolute;inset:-18% -10%;z-index:0;pointer-events:none;
+  background:linear-gradient(112deg,transparent 20%,rgba(255,244,220,.13) 45%,transparent 66%);
+  transform:translateX(-28%);
+  animation:woodSheen 11s ease-in-out infinite alternate;
+}
+.timber .material-number,.timber .material-label,.timber-sample{z-index:2}
+.timber-sample{
+  border:1px solid rgba(255,235,208,.2);
+  background:
+    repeating-radial-gradient(ellipse at 18% 52%,transparent 0 9px,rgba(69,34,18,.28) 10px 11px,transparent 12px 23px),
+    repeating-linear-gradient(103deg,#704327 0 3px,#9b6138 4px 12px,#57331f 13px 14px,#b77947 15px 25px);
+  box-shadow:inset -22px 0 30px rgba(43,22,12,.65),inset 14px 0 20px rgba(255,216,174,.1),18px 24px 34px rgba(43,22,12,.35);
+}
+
+/* Slight material warmth in editorial surfaces. */
+.manifesto{
+  position:relative;overflow:hidden;
+  background:
+    linear-gradient(rgba(33,29,25,.965),rgba(33,29,25,.965)),
+    repeating-linear-gradient(96deg,transparent 0 13px,rgba(255,235,207,.12) 14px 15px,transparent 16px 38px);
+}
+.manifesto::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;
+  background:repeating-radial-gradient(ellipse at 8% 55%,transparent 0 20px,rgba(212,167,124,.22) 21px 22px,transparent 23px 47px);
+}
+.manifesto>*{position:relative;z-index:1}
+
+.story{
+  background:
+    linear-gradient(rgba(230,224,212,.965),rgba(230,224,212,.965)),
+    repeating-linear-gradient(94deg,rgba(91,56,34,.04) 0 1px,transparent 1px 17px);
+}
+.story-row{position:relative}
+.story-row::after{
+  content:"";position:absolute;left:55px;right:0;top:-1px;height:1px;pointer-events:none;
+  background:linear-gradient(90deg,rgba(90,55,33,.48),rgba(169,125,88,.25),transparent);
+}
+
+.studio-callout{
+  background:
+    linear-gradient(rgba(83,43,40,.94),rgba(83,43,40,.94)),
+    repeating-linear-gradient(98deg,rgba(255,227,196,.06) 0 1px,transparent 1px 19px),
+    linear-gradient(115deg,#3f2721,#75483d 60%,#4b2c27);
+}
+.studio-poster{
+  background:
+    linear-gradient(rgba(199,173,150,.94),rgba(199,173,150,.94)),
+    repeating-linear-gradient(95deg,rgba(71,43,29,.12) 0 1px,transparent 1px 15px),
+    linear-gradient(90deg,#b88d65,#d2b89d,#a77a57);
+}
+
+.sleep-copy{
+  position:relative;overflow:hidden;
+  background:
+    linear-gradient(rgba(52,58,49,.965),rgba(52,58,49,.965)),
+    repeating-linear-gradient(95deg,rgba(224,198,165,.08) 0 1px,transparent 1px 18px);
+}
+
+footer{
+  position:relative;overflow:hidden;
+  background:
+    linear-gradient(rgba(33,29,25,.965),rgba(33,29,25,.965)),
+    repeating-linear-gradient(96deg,rgba(235,204,171,.05) 0 1px,transparent 1px 21px),
+    linear-gradient(90deg,#241a15,#33251d,#201814);
+}
+footer::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.25;
+  background:repeating-radial-gradient(ellipse at 2% 50%,transparent 0 26px,rgba(209,159,115,.14) 27px 28px,transparent 29px 61px);
+}
+footer>*{position:relative;z-index:1}
+
+/* Product imagery gets a subtle timber-frame edge rather than a generic card edge. */
+.product-photo::after,.preview-image::after,.sleep-photo::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(84,52,31,.15),inset 0 -24px 44px rgba(51,31,19,.04);
+}
+
+/* Wood finish swatches: retain the chosen base colour but add grain/highlight. */
+.swatch{
+  position:relative;overflow:hidden;
+  box-shadow:inset 0 0 0 1px rgba(49,29,18,.22),inset -4px -3px 8px rgba(34,19,11,.16),inset 4px 3px 8px rgba(255,239,218,.14);
+}
+.swatch::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    repeating-linear-gradient(102deg,transparent 0 3px,rgba(45,24,13,.16) 4px 5px,transparent 6px 10px),
+    linear-gradient(125deg,rgba(255,255,255,.16),transparent 42%);
+  mix-blend-mode:multiply;
+}
+
+/* Give selected controls a fine teak-inlay cue. */
+.option-items button.active,.category-pills button.active{
+  box-shadow:inset 0 -2px 0 #9d6b46;
+}
+
+/* Warmer panel surfaces inside the design studio. */
+.studio-controls,.studio-preview,.drawer,.dialog{
+  background-image:linear-gradient(rgba(255,255,255,.982),rgba(255,255,255,.982)),repeating-linear-gradient(96deg,rgba(112,72,44,.035) 0 1px,transparent 1px 18px);
+}
+
+/* Small grain mark that can be read as joinery/inlay, not decoration. */
+.kicker::before,.overline::before{
+  content:"";display:inline-block;width:18px;height:3px;margin-right:9px;vertical-align:middle;
+  background:linear-gradient(90deg,#5d3924,#b0784d 46%,#68432d);
+  box-shadow:0 1px 0 rgba(255,255,255,.25);
+}
+.overline .rule{display:none}
+.kicker.light::before{background:linear-gradient(90deg,#8e5b40,#e0b18f 52%,#8b5a42)}
+
+@keyframes woodSheen{from{transform:translateX(-34%) rotate(.001deg)}to{transform:translateX(22%) rotate(.001deg)}}
+
+@media (prefers-reduced-motion:reduce){
+  .timber::after{animation:none;transform:none;opacity:.45}
+}
+
+@media (max-width:760px){
+  .hero::after{left:5%;right:5%}
+  .collection::before,.story::before,.visit::before,.reviews::before{left:5%;right:5%}
+  .kicker::before,.overline::before{width:13px;margin-right:6px}
+}
