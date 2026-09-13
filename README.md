@@ -9,11 +9,11 @@ This is a dependency-free static website. Serve the repository folder with any l
 ## What works today
 
 - Responsive collection with category filters and product detail views.
-- Device-local inquiry bag and an interactive design studio for a new piece or an existing collection piece. Visitors can choose form, size, fabric direction, teak finish, woodwork and seat feel, then send the brief through WhatsApp for a real quote.
+- Device-local inquiry bag and an interactive design studio for a new piece or an existing collection piece. Visitors can choose form, size, fabric direction, teak finish, woodwork and seat feel, then send the brief through WhatsApp for a real quote. The sofa preview instantly switches between two and three seats and recolours its upholstery for standard fabrics.
 - Call, directions, showroom information, guarantee and Sleepwell sections.
 - Basic search metadata, FurnitureStore schema, keyboard-friendly dialogs, and `dataLayer` / `ssf:analytics` event hooks.
 
-The product names and descriptions are **illustrative concepts**, not inventory. The two main furniture images are original concept imagery, and other catalog images are third-party reference photographs. The studio image is a visual reference; it does not render an exact product from selected materials. No prices, testimonials, stock levels or opening hours are claimed. The address and phone are from the supplied public listing and should be confirmed by the business. Privacy, guarantee, delivery and installation text are placeholders pending approved policies.
+The product names and descriptions are **illustrative concepts**, not inventory. The two main furniture images are original concept imagery, and other catalog images are third-party reference photographs. The sofa studio preview is an illustrative concept, not an exact manufacturing render. Two and three seat layouts and standard fabric directions update visually; L-shape, custom sizes, other product types, and workshop details remain reference imagery and quote inputs. No prices, testimonials, stock levels or opening hours are claimed. The address and phone are from the supplied public listing and should be confirmed by the business. Privacy, guarantee, delivery and installation text are placeholders pending approved policies.
 
 ## Before accepting payments
 
