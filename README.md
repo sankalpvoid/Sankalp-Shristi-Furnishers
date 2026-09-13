@@ -9,11 +9,11 @@ This is a dependency-free static website. Serve the repository folder with any l
 ## What works today
 
 - Responsive collection with category filters and product detail views.
-- Device-local inquiry bag and a custom-furniture brief form. Both open a prefilled WhatsApp message when sent.
+- Device-local inquiry bag and an interactive design studio for a new piece or an existing collection piece. Visitors can choose form, size, fabric direction, teak finish, woodwork and seat feel, then send the brief through WhatsApp for a real quote.
 - Call, directions, showroom information, guarantee and Sleepwell sections.
 - Basic search metadata, FurnitureStore schema, keyboard-friendly dialogs, and `dataLayer` / `ssf:analytics` event hooks.
 
-The product names, descriptions and stock photographs are **illustrative concepts**, not inventory or photographs of the showroom. No prices, testimonials, stock levels or opening hours are claimed. The address and phone are from the supplied public listing and should be confirmed by the business. Privacy, guarantee, delivery and installation text are placeholders pending approved policies.
+The product names and descriptions are **illustrative concepts**, not inventory. The two main furniture images are original concept imagery, and other catalog images are third-party reference photographs. The studio image is a visual reference; it does not render an exact product from selected materials. No prices, testimonials, stock levels or opening hours are claimed. The address and phone are from the supplied public listing and should be confirmed by the business. Privacy, guarantee, delivery and installation text are placeholders pending approved policies.
 
 ## Before accepting payments
 
@@ -39,4 +39,4 @@ Do not put a Razorpay secret key in this repository or in client-side JavaScript
 
 ## Deployment
 
-The included GitHub Pages workflow publishes the repository root when GitHub Pages is configured to use **GitHub Actions**. The site also has a private Sites preview. Set a custom domain later if desired. Product images currently use third-party Unsplash URLs; replace them with licensed, locally hosted showroom photography before public launch.
+The included GitHub Pages workflow publishes the repository root when GitHub Pages is configured to use **GitHub Actions**. The site also has a private Sites preview. Set a custom domain later if desired. Replace all concept and stock imagery with real showroom and workshop photography before public launch.
